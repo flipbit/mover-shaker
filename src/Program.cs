@@ -41,9 +41,10 @@ static async Task Run(IHost host, object args)
     {
         switch (args)
         {
-            case RunCommand.Options ackOptions:
-                var ack = host.Services.GetService<RunCommand>();
-                exitCode = await ack.Execute(ackOptions);
+            case RunCommand.Options runOptions:
+                var runCommand = host.Services.GetService<RunCommand>();
+
+                exitCode = await runCommand!.Execute(runOptions);
                 break;
         }
     }

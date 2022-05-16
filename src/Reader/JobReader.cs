@@ -195,6 +195,9 @@ internal class JobReader : IJobReader
         var assembly = typeof(JobReader).Assembly;
 
         await using var stream = assembly.GetManifestResourceStream("Mover.Reader.Defaults.txt");
+
+        if (stream is null) return;   
+
         using var reader = new StreamReader(stream);
         var defaultConfiguration = await reader.ReadToEndAsync();
 

@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D7E60843-1A36-44B0-A110-E3E3BDD0F0FF}"
 	ProjectSection(SolutionItems) = preProject
 		..\README.md = ..\README.md
+		..\.github\workflows\run-unit-tests.yaml = ..\.github\workflows\run-unit-tests.yaml
 	EndProjectSection
 EndProject
 Global

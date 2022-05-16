@@ -10,7 +10,7 @@ internal class RunCommand
     public class Options
     {
         [Value(0, HelpText = "The path to the file containing jobs", Required = true)]
-        public string FileName { get; set; }
+        public string FileName { get; set; } = string.Empty;
 
         [Option('v', "verbose", HelpText = "Enable verbose logging.", Default = false)]
         public bool Verbose { get; set; }
