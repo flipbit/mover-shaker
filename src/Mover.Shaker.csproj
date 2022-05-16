@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<OutputType>Exe</OutputType>
+	<TargetFramework>net6.0</TargetFramework>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
+	<RootNamespace>Mover</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<None Remove="Reader\Defaults.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<EmbeddedResource Include="Reader\Defaults.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<PackageReference Include="CommandLineParser" Version="2.8.0" />
+	<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+	<PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+	<PackageReference Include="sharpconfig" Version="3.2.9.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+	  <_Parameter1>Mover.Shaker.Tests</_Parameter1>
+	</AssemblyAttribute>
+  </ItemGroup>
+
+  <ItemGroup>
+	<Resource Include="Reader\Defaults.txt" />
+  </ItemGroup>
+
+</Project>
